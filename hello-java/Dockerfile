@@ -16,6 +16,7 @@ RUN   yum install -y --disableplugin=subscription-manager java-1.8.0-openjdk-hea
 ADD   https://github.com/RedHatTraining/DO288-apps/releases/download/OCP-4.1-1/hello-java.jar /opt/app-root/bin/
 
 COPY  --chown=wildfly:0 run-app.sh /opt/app-root/bin/
+RUN   chmod +x /opt/app-root/bin/run-app.sh
 
 RUN   chown -R wildfly:0 /opt/app-root && \
       chmod -R 700 /opt/app-root && \
