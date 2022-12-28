@@ -25,7 +25,7 @@ RUN   chown -R wildfly:0 /opt/app-root && \
 
 EXPOSE 8080
 
-USER  wildfly
+USER  1002
 
 # Run the fat JAR
 CMD   /opt/app-root/bin/run-app.sh
